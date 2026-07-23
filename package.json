@@ -12,6 +12,14 @@
     "cii",
     "pdf"
   ],
+  "homepage": "https://github.com/canopynexus/factur-x#readme",
+  "bugs": {
+    "url": "https://github.com/canopynexus/factur-x/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/canopynexus/factur-x.git"
+  },
   "license": "MIT",
   "author": "Canopy Nexus Ltd",
   "type": "module",
@@ -29,7 +37,7 @@
     }
   },
   "bin": {
-    "facturx": "./bin/facturx.mjs"
+    "facturx": "bin/facturx.mjs"
   },
   "files": [
     "dist",
