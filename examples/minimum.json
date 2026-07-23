@@ -1,0 +1,14 @@
+{
+  "$options": { "level": "minimum", "format": "xml" },
+  "number": "FA-2026-0001",
+  "issueDate": "2026-07-01",
+  "currency": "EUR",
+  "seller": {
+    "name": "Reblochon SARL",
+    "legalId": { "value": "532198476", "scheme": "0002" },
+    "vatId": "FR32532198476",
+    "address": { "countryCode": "FR" }
+  },
+  "buyer": { "name": "Acme France SAS" },
+  "totals": { "taxBasis": 1000.0, "tax": 200.0, "grand": 1200.0, "due": 1200.0 }
+}

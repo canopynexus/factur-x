@@ -1,0 +1,51 @@
+{
+  "$options": { "level": "en16931", "format": "pdf", "locale": "de-DE" },
+  "number": "FA-2026-0006",
+  "issueDate": "2026-07-10",
+  "currency": "EUR",
+  "deliveryDate": "2026-07-09",
+  "seller": {
+    "name": "Reblochon SARL",
+    "legalId": { "value": "532198476", "scheme": "0002" },
+    "vatId": "FR32532198476",
+    "address": {
+      "line1": "12 route des Alpages",
+      "postCode": "74230",
+      "city": "Thônes",
+      "countryCode": "FR"
+    }
+  },
+  "buyer": {
+    "name": "Acme Feinkost GmbH",
+    "vatId": "DE811193231",
+    "address": {
+      "line1": "Käsestraße 8",
+      "postCode": "80331",
+      "city": "München",
+      "countryCode": "DE"
+    }
+  },
+  "lines": [
+    {
+      "name": "Reblochon fermier AOP — colis export",
+      "quantity": 200,
+      "unit": "H87",
+      "unitPrice": 6.1,
+      "vat": { "categoryCode": "K" }
+    }
+  ],
+  "vatExemptions": {
+    "K": {
+      "reason": "Intra-community supply exempt under Article 138 of Directive 2006/112/EC",
+      "code": "VATEX-EU-IC"
+    }
+  },
+  "payment": {
+    "meansTypeCode": "58",
+    "iban": "FR7630006000011234567890189",
+    "bic": "AGRIFRPP",
+    "terms": "Zahlbar innerhalb von 30 Tagen",
+    "dueDate": "2026-08-09"
+  },
+  "notes": ["Exonération de TVA — livraison intracommunautaire, art. 262 ter I du CGI."]
+}

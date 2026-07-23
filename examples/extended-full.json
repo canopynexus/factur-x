@@ -1,0 +1,58 @@
+{
+  "$options": { "level": "extended", "format": "pdf", "locale": "fr-FR" },
+  "number": "FA-2026-0005",
+  "issueDate": "2026-07-08",
+  "currency": "EUR",
+  "buyerReference": "ACME-ACHATS-77",
+  "purchaseOrderReference": "PO-2026-3199",
+  "deliveryDate": "2026-07-07",
+  "seller": {
+    "name": "Reblochon SARL",
+    "legalId": { "value": "532198476", "scheme": "0002" },
+    "vatId": "FR32532198476",
+    "address": {
+      "line1": "12 route des Alpages",
+      "postCode": "74230",
+      "city": "Thônes",
+      "countryCode": "FR"
+    },
+    "email": "facturation@reblochon.example"
+  },
+  "buyer": {
+    "name": "Acme France SAS",
+    "vatId": "FR90410108494",
+    "address": {
+      "line1": "1 rue de la Paix",
+      "line2": "Bâtiment B",
+      "postCode": "75002",
+      "city": "Paris",
+      "countryCode": "FR"
+    }
+  },
+  "lines": [
+    {
+      "name": "Abondance AOP — meule entière",
+      "quantity": 4,
+      "unit": "H87",
+      "unitPrice": 185.0,
+      "vat": { "categoryCode": "S", "rate": 5.5 }
+    },
+    {
+      "name": "Location cave d'affinage",
+      "quantity": 3,
+      "unit": "MON",
+      "unitPrice": 220.0,
+      "vat": { "categoryCode": "S", "rate": 20 }
+    }
+  ],
+  "totals": { "taxBasis": 1400.0, "tax": 172.7, "grand": 1572.7, "prepaid": 500.0, "due": 1072.7 },
+  "payment": {
+    "meansTypeCode": "58",
+    "iban": "FR7630006000011234567890189",
+    "bic": "AGRIFRPP",
+    "reference": "FA-2026-0005",
+    "terms": "Solde à 30 jours — acompte de 500 € reçu le 2026-06-15",
+    "dueDate": "2026-08-07"
+  },
+  "notes": ["Acompte de 500,00 € déjà réglé.", "Marchandise conservée entre 4 et 8 °C."]
+}

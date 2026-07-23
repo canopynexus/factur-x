@@ -1,0 +1,59 @@
+{
+  "$options": { "level": "en16931", "format": "pdf", "locale": "en-GB" },
+  "number": "FA-2026-0008",
+  "issueDate": "2026-07-15",
+  "currency": "GBP",
+  "deliveryDate": "2026-07-14",
+  "seller": {
+    "name": "Reblochon SARL",
+    "legalId": { "value": "532198476", "scheme": "0002" },
+    "vatId": "FR32532198476",
+    "address": {
+      "line1": "12 route des Alpages",
+      "postCode": "74230",
+      "city": "Thônes",
+      "countryCode": "FR"
+    }
+  },
+  "buyer": {
+    "name": "Acme Trading Ltd",
+    "legalId": { "value": "09876543", "scheme": "0060" },
+    "vatId": "GB123456789",
+    "address": {
+      "line1": "221B Cheddar Lane",
+      "postCode": "SW1A 1AA",
+      "city": "London",
+      "countryCode": "GB"
+    }
+  },
+  "lines": [
+    {
+      "name": "Reblochon fermier AOP",
+      "quantity": 150,
+      "unit": "H87",
+      "unitPrice": 5.8,
+      "vat": { "categoryCode": "G" }
+    },
+    {
+      "name": "Beaufort d'été AOP",
+      "quantity": 60,
+      "unit": "H87",
+      "unitPrice": 9.9,
+      "vat": { "categoryCode": "G" }
+    }
+  ],
+  "vatExemptions": {
+    "G": {
+      "reason": "Export outside the EU (United Kingdom), exempt under Article 146 of Directive 2006/112/EC",
+      "code": "VATEX-EU-G"
+    }
+  },
+  "payment": {
+    "meansTypeCode": "30",
+    "iban": "FR7630006000011234567890189",
+    "bic": "AGRIFRPP",
+    "terms": "Payment within 30 days — amounts in pounds sterling",
+    "dueDate": "2026-08-14"
+  },
+  "notes": ["UK import VAT and duties are the responsibility of the buyer (Incoterm DAP London)."]
+}

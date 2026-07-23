@@ -1,0 +1,66 @@
+{
+  "$options": { "level": "en16931", "format": "pdf", "locale": "fr-FR" },
+  "number": "FA-2026-0004",
+  "issueDate": "2026-07-06",
+  "currency": "EUR",
+  "buyerReference": "ACME-ACHATS-77",
+  "purchaseOrderReference": "PO-2026-3141",
+  "deliveryDate": "2026-07-04",
+  "seller": {
+    "name": "Reblochon SARL",
+    "legalId": { "value": "532198476", "scheme": "0002" },
+    "vatId": "FR32532198476",
+    "address": {
+      "line1": "12 route des Alpages",
+      "postCode": "74230",
+      "city": "Thônes",
+      "countryCode": "FR"
+    },
+    "email": "facturation@reblochon.example"
+  },
+  "buyer": {
+    "name": "Acme France SAS",
+    "vatId": "FR90410108494",
+    "address": {
+      "line1": "1 rue de la Paix",
+      "postCode": "75002",
+      "city": "Paris",
+      "countryCode": "FR"
+    }
+  },
+  "lines": [
+    {
+      "name": "Reblochon fermier AOP",
+      "description": "Meule 450 g, lait cru — taux réduit produits alimentaires",
+      "quantity": 120,
+      "unit": "H87",
+      "unitPrice": 6.5,
+      "vat": { "categoryCode": "S", "rate": 5.5 }
+    },
+    {
+      "name": "Plateau dégustation « Alpage »",
+      "quantity": 15,
+      "unit": "H87",
+      "unitPrice": 34.0,
+      "vat": { "categoryCode": "S", "rate": 5.5 }
+    },
+    {
+      "name": "Livraison réfrigérée",
+      "quantity": 1,
+      "unit": "C62",
+      "unitPrice": 48.0,
+      "vat": { "categoryCode": "S", "rate": 20 }
+    }
+  ],
+  "payment": {
+    "meansTypeCode": "30",
+    "iban": "FR7630006000011234567890189",
+    "bic": "AGRIFRPP",
+    "reference": "FA-2026-0004",
+    "terms": "Paiement à 30 jours, escompte 1% à 8 jours",
+    "dueDate": "2026-08-05"
+  },
+  "notes": [
+    "Pénalités de retard : 3 fois le taux légal. Indemnité forfaitaire de recouvrement : 40 €."
+  ]
+}

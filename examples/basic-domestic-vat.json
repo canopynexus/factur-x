@@ -1,0 +1,50 @@
+{
+  "$options": { "level": "basic", "format": "pdf", "locale": "fr-FR" },
+  "number": "FA-2026-0003",
+  "issueDate": "2026-07-03",
+  "currency": "EUR",
+  "seller": {
+    "name": "Reblochon SARL",
+    "legalId": { "value": "532198476", "scheme": "0002" },
+    "vatId": "FR32532198476",
+    "address": {
+      "line1": "12 route des Alpages",
+      "postCode": "74230",
+      "city": "Thônes",
+      "countryCode": "FR"
+    }
+  },
+  "buyer": {
+    "name": "Acme France SAS",
+    "vatId": "FR90410108494",
+    "address": {
+      "line1": "1 rue de la Paix",
+      "postCode": "75002",
+      "city": "Paris",
+      "countryCode": "FR"
+    }
+  },
+  "lines": [
+    {
+      "name": "Reblochon fermier AOP",
+      "description": "Meule 450 g, lait cru",
+      "quantity": 40,
+      "unit": "H87",
+      "unitPrice": 6.9,
+      "vat": { "categoryCode": "S", "rate": 5.5 }
+    },
+    {
+      "name": "Tomme de Savoie IGP",
+      "quantity": 12,
+      "unit": "H87",
+      "unitPrice": 11.2,
+      "vat": { "categoryCode": "S", "rate": 5.5 }
+    }
+  ],
+  "payment": {
+    "meansTypeCode": "30",
+    "iban": "FR7630006000011234567890189",
+    "terms": "Paiement à 30 jours fin de mois",
+    "dueDate": "2026-08-31"
+  }
+}

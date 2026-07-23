@@ -1,0 +1,67 @@
+{
+  "name": "@canopynexus/factur-x",
+  "version": "0.1.0",
+  "description": "Create, verify and extract Factur-X / ZUGFeRD (EN 16931) electronic invoices — hybrid PDF+XML or plain CII XML.",
+  "keywords": [
+    "factur-x",
+    "zugferd",
+    "en16931",
+    "e-invoice",
+    "einvoicing",
+    "invoice",
+    "cii",
+    "pdf"
+  ],
+  "license": "MIT",
+  "author": "Canopy Nexus Ltd",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "bin": {
+    "facturx": "./bin/facturx.mjs"
+  },
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "scripts": {
+    "build": "vite build && npm run build:types",
+    "build:types": "node node_modules/typescript7/lib/tsc.js -p tsconfig.build.json",
+    "check-types": "node node_modules/typescript7/lib/tsc.js --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "examples": "node ./bin/facturx.mjs batch examples --out-dir out"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.10.1",
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.0",
+    "@types/node": "^24.0.0",
+    "@vitest/coverage-v8": "^4.1.10",
+    "eslint": "^10.7.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.6",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.65.0",
+    "typescript7": "npm:typescript@~7.0.2",
+    "vite": "^8.1.5",
+    "vitest": "^4.1.10"
+  }
+}

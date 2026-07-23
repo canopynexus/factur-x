@@ -1,0 +1,43 @@
+{
+  "$options": { "level": "basicwl", "format": "pdf", "locale": "fr-FR" },
+  "number": "FA-2026-0002",
+  "issueDate": "2026-07-02",
+  "currency": "EUR",
+  "seller": {
+    "name": "Reblochon SARL",
+    "legalId": { "value": "532198476", "scheme": "0002" },
+    "vatId": "FR32532198476",
+    "address": {
+      "line1": "12 route des Alpages",
+      "postCode": "74230",
+      "city": "Thônes",
+      "countryCode": "FR"
+    },
+    "email": "facturation@reblochon.example"
+  },
+  "buyer": {
+    "name": "Acme France SAS",
+    "vatId": "FR90410108494",
+    "address": {
+      "line1": "1 rue de la Paix",
+      "postCode": "75002",
+      "city": "Paris",
+      "countryCode": "FR"
+    }
+  },
+  "lines": [
+    {
+      "name": "Affinage en cave — prestation mensuelle",
+      "quantity": 1,
+      "unit": "MON",
+      "unitPrice": 850.0,
+      "vat": { "categoryCode": "S", "rate": 20 }
+    }
+  ],
+  "payment": {
+    "meansTypeCode": "30",
+    "iban": "FR7630006000011234567890189",
+    "terms": "Paiement à 30 jours",
+    "dueDate": "2026-08-01"
+  }
+}

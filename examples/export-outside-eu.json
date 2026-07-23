@@ -1,0 +1,57 @@
+{
+  "$options": { "level": "en16931", "format": "pdf", "locale": "en-US" },
+  "number": "FA-2026-0007",
+  "issueDate": "2026-07-13",
+  "currency": "USD",
+  "deliveryDate": "2026-07-11",
+  "seller": {
+    "name": "Reblochon SARL",
+    "legalId": { "value": "532198476", "scheme": "0002" },
+    "vatId": "FR32532198476",
+    "address": {
+      "line1": "12 route des Alpages",
+      "postCode": "74230",
+      "city": "Thônes",
+      "countryCode": "FR"
+    }
+  },
+  "buyer": {
+    "name": "Acme Gourmet Imports Corp.",
+    "address": {
+      "line1": "350 Fifth Avenue",
+      "postCode": "10118",
+      "city": "New York",
+      "countryCode": "US"
+    }
+  },
+  "lines": [
+    {
+      "name": "Reblochon fermier AOP — pasteurised export batch",
+      "quantity": 500,
+      "unit": "H87",
+      "unitPrice": 8.4,
+      "vat": { "categoryCode": "G" }
+    },
+    {
+      "name": "Cold-chain air freight",
+      "quantity": 1,
+      "unit": "C62",
+      "unitPrice": 640.0,
+      "vat": { "categoryCode": "G" }
+    }
+  ],
+  "vatExemptions": {
+    "G": {
+      "reason": "Export outside the EU, exempt under Article 146 of Directive 2006/112/EC",
+      "code": "VATEX-EU-G"
+    }
+  },
+  "payment": {
+    "meansTypeCode": "30",
+    "iban": "FR7630006000011234567890189",
+    "bic": "AGRIFRPP",
+    "terms": "Net 45 — payable in USD",
+    "dueDate": "2026-08-27"
+  },
+  "notes": ["VAT exemption — export outside the European Union, art. 262 I du CGI."]
+}
