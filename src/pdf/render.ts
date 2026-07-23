@@ -27,6 +27,23 @@ interface Cursor {
   y: number;
 }
 
+function wrapText(text: string, font: PDFFont, size: number, maxWidth: number): string[] {
+  const words = text.split(/\s+/);
+  const lines: string[] = [];
+  let current = '';
+  for (const word of words) {
+    const candidate = current ? `${current} ${word}` : word;
+    if (current && font.widthOfTextAtSize(candidate, size) > maxWidth) {
+      lines.push(current);
+      current = word;
+    } else {
+      current = candidate;
+    }
+  }
+  if (current) lines.push(current);
+  return lines;
+}
+
 export async function renderPdf(invoice: Invoice, options: CreateOptions): Promise<PDFDocument> {
   const locale = options.locale ?? 'en-GB';
   const money = (value: number) => sanitize(formatAmount(value, invoice.currency, locale));
@@ -147,14 +164,19 @@ export async function renderPdf(invoice: Invoice, options: CreateOptions): Promi
 
   // ---- VAT breakdown + totals ---------------------------------------------
   for (const group of totals.vatBreakdown) {
-    draw(
-      `VAT ${group.categoryCode} ${group.rate}% on ${money(group.basis)}` +
-        (group.exemptionReason ? ` — ${group.exemptionReason}` : ''),
-      MARGIN,
-      { size: 8, color: MUTED },
-    );
+    draw(`VAT ${group.categoryCode} ${group.rate}% on ${money(group.basis)}`, MARGIN, {
+      size: 8,
+      color: MUTED,
+    });
     draw(money(group.tax), 0, { size: 8, color: MUTED, right: col.amount });
     newLine(11);
+    if (group.exemptionReason) {
+      const maxWidth = col.amount - MARGIN;
+      for (const line of wrapText(group.exemptionReason, font, 8, maxWidth)) {
+        draw(line, MARGIN, { size: 8, color: MUTED });
+        newLine(11);
+      }
+    }
   }
   newLine(4);
   const totalRows: [string, string, boolean][] = [
